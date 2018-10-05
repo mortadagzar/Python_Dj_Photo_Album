@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'DjangoAlbum',
 ]
 
 MIDDLEWARE = [
@@ -116,5 +117,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
 STATIC_URL = '/static/'
+STATICFILES_DIR=[
+os.path.join(BASE_DIR,'static'),
+]
+STATIC_ROOT=os.path.join(os.path.dirname(BASE_DIR),'static_mo')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT=os.path.join(os.path.dirname(BASE_DIR),'media_mo')
